@@ -82,12 +82,12 @@ test("Add potion to the inventory", () => {
   expect(player.inventory.length).toBeGreaterThan(oldCount);
 });
 
-test('uses a potion from inventory', () => {
-    const player = new Player ('Dave');
-    player.inventory = [new Potion (), new Potion (), new Potion()];
-    const oldCount = player.inventory.length;
+test("uses a potion from inventory", () => {
+  const player = new Player("Dave");
+  player.inventory = [new Potion(), new Potion(), new Potion()];
+  const oldCount = player.inventory.length;
 
-    player.usePotion(1);
+  player.usePotion(1);
 
-    expect(player.inventory.length).toBeLessThan(oldCount);
+  expect(player.inventory.length).toBeLessThan(oldCount);
 });
